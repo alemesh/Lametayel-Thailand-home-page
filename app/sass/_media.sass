@@ -4,22 +4,71 @@
 
 /* Large Devices, Wide Screens */
 @media only screen and (max-width : 1200px)
-	/**/
+    .hlt-wraper
+      .hlt-menu-section
+        .hlt-top-wraper
+          .right-block
+            display: none
+          .left-block
+            width: 100%
 
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px)
-	/**/
+    .hlt-wraper
+      .header
+        .htl-contactform-section
+          .main-holder-form
+            max-width: 600px
+          h3
+            //margin: 45px 0 15px
+            padding-bottom: 0
+          .contact-form
+            //margin: 27px 0 60px 0
+          .form-row
+            width: 100%
+            margin: 13px 0  0
 
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px)
-	/**/
+    .hlt-wraper
+      .header
+        .htl-contactform-section
+          h3
+            font-size: 40px
+            margin-bottom: 10px
 
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px)
-	/**/
+    .hlt-wraper
+      .header
+        .htl-contactform-section
+          h3
+            font-size: 30px
+          .main-holder-form
+            padding: 0 30px
+          .form-control
+            height: 45px
+            &:after
+              height: 45px
+          .btn
+            height: 45px
+        .form-grow-5
+          span
+            left: 21px
+
+      .hlt-menu-section
+        .hlt-top-wraper
+          .main-holder
+            padding: 0 15px
+          a
+            //font-size: 14px
+            padding: 0
+          .left-block
+            justify-content: space-between
+
 
 
 /* Custom, iPhone Retina */
