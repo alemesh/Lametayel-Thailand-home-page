@@ -391,6 +391,16 @@ input, textarea, select
 	//===================== finish custom select ================================
 
 	.second-section
+		width: 100%
+		position: relative
+		.background-holder
+			background-image: url(../img/background-holder.png)
+			background-size: cover
+			position: absolute
+			top: 0
+			left: 0
+			width: 100%
+			height: 11px
 		.main-holder
 			padding: 0
 		.items
@@ -441,6 +451,92 @@ input, textarea, select
 				z-index: 2
 				transform: translateX(-50%)
 
+		//=============== slider ====================
+
+		.slick-slider
+			direction: ltr
+			position: relative
+			display: block
+			box-sizing: border-box
+			-webkit-touch-callout: none
+			-webkit-user-select: none
+			-khtml-user-select: none
+			-moz-user-select: none
+			-ms-user-select: none
+			user-select: none
+			-ms-touch-action: pan-y
+			touch-action: pan-y
+			-webkit-tap-highlight-color: transparent
+
+			.slick-list
+				position: relative
+				overflow: hidden
+				display: block
+				margin: 0
+				padding: 0
+				width: 100%
+				transform: translate3d(0, 0, 0)
+				&:focus
+					outline: none
+				&.dragging
+					cursor: pointer
+					cursor: hand
+
+			.slick-track
+				position: relative
+				left: 0
+				top: 0
+				display: block
+				transform: translate3d(0, 0, 0)
+
+				&:before,
+				&:after
+					content: ""
+					display: table
+
+				&:after
+					clear: both
+
+			.slick-slide
+				float: left
+				height: 100%
+				min-height: 250px
+
+			.slick-arrow
+				position: absolute
+				border: none
+				outline: none
+				top: 50%
+				width: 25px
+				height: 25px
+				border-left: 5px solid #00b3cb
+				border-top: 5px solid #00b3cb
+				z-index: 99999
+
+			.slick-next
+				right: 20px
+				transform: translateY(-50%) rotate(135deg)
+			.slick-prev
+				left: 20px
+				transform: translateY(-50%) rotate(-45deg)
+
+			.slick-arrow.slick-hidden
+				display: none
+
+			.slick-next:before, .slick-prev:before
+				content: none
+			.slick-dots
+				li
+					margin: 0
+					button
+						&:before
+							font-size: 12px
+			.slick-dots
+				bottom: -35px
+
+
+
+
 	.third-section
 		margin: 0 auto
 		overflow: hidden
@@ -485,6 +581,49 @@ input, textarea, select
 				.text
 					z-index: 2
 
+
+		.wrap-button
+			margin-top: 50px
+			text-align: center
+			display: flex
+			justify-content: center
+			align-items: center
+			font-family: "almoni-dl-aaa-bold"
+			line-height: 1.2
+			font-size: 16px
+			.button
+				text-decoration: none
+				background: #fcaf17
+				display: flex
+				justify-content: center
+				align-items: center
+				min-height: 50px
+				min-width: 230px
+				color: white
+				border-radius: 25px
+				margin-bottom: 50px
+				position: relative
+				transition: all 0.3s ease
+				&:hover
+					text-decoration: none
+					background: #da9100
+					box-shadow: 1.414px 1.414px 50px 0 rgba(255, 197, 84, 0.3)
+				&:after
+					content: ''
+					position: absolute
+					border: none
+					outline: 0
+					top: 50%
+					left: 10%
+					width: 11px
+					height: 11px
+					border-left: 3px solid white
+					border-top: 3px solid white
+					//z-index: 99999
+					transform: translateY(-50%) rotate(-45deg)
+					z-index: 99999
+
+
 	.fourth-section
 		position: relative
 		background: #f4f4f4
@@ -507,8 +646,8 @@ input, textarea, select
 			color: #01013b
 			text-align: center
 			margin-top: 50px
-			margin-bottom: 30px
-			padding-bottom: 15px
+			margin-bottom: 40px
+			padding-bottom: 20px
 			position: relative
 			&:after
 				content: ''
@@ -526,6 +665,7 @@ input, textarea, select
 			align-items: center
 			margin: 0 -55px 70px
 			direction: rtl
+			flex-wrap: wrap
 			.item
 				display: flex
 				flex-direction: column
@@ -536,6 +676,7 @@ input, textarea, select
 				line-height: 1.2
 				font-size: 20px
 				color: #01013b
+				margin-bottom: 30px
 			.wrap-img
 				display: flex
 				justify-content: center
@@ -544,13 +685,453 @@ input, textarea, select
 				background-size: cover
 				width: 119px
 				height: 120px
-				margin-bottom: 20px
+				margin-bottom: 15px
 			img
 				transition: all .5s ease
 				&:hover
 					transform: scale(1.2)
 					text-decoration: none
 					color: #111
+
+
+	.fifth-section
+		width: 100%
+		background: white
+		.main-holder
+			max-width: 1360px
+			padding: 0 30px
+		h3
+			direction: rtl
+			font-family: "almoni-dl-aaa-bold"
+			line-height: 1.2
+			font-size: 27px
+			color: #01013b
+			text-align: center
+			margin-top: 50px
+			margin-bottom: 40px
+			padding-bottom: 20px
+			position: relative
+			&:after
+				content: ''
+				width: 70px
+				color: #05a0ab
+				position: absolute
+				border-bottom: 5px solid #05a0ab
+				bottom: 0
+				left: 50%
+				z-index: 2
+				transform: translateX(-50%)
+		.items
+			display: flex
+			justify-content: center
+			align-items: center
+			flex-wrap: wrap
+			margin: 0 -15px
+			margin-bottom: 70px
+			.item
+				direction: rtl
+				width: 20%
+				list-style: none
+				display: flex
+				justify-content: center
+				align-items: center
+				padding: 0 15px
+			a
+				min-height: 280px
+				max-width: 240px
+				color: white
+				display: flex
+				//justify-content: center
+				align-items: center
+				flex-direction: column
+				background: #01013b
+				text-decoration: none
+				text-align: center
+				padding: 0 20px
+				transition: all 0.5s ease
+				&:hover
+					text-decoration: none
+					//background: #c98e1a
+					box-shadow: 1.414px 1.414px 50px 0px rgba(46, 46, 150, 0.8)
+			.wrap-img
+				//margin-bottom: 25px
+				margin-top: 25px
+				height: 80px
+			.wrap-title
+				width: 75%
+				min-height: 70px
+				display: flex
+				justify-content: center
+				align-items: center
+				margin-bottom: 20px
+				padding-bottom: 20px
+			.order-1
+				border-bottom: 4px solid #dc4f26
+			.order-2
+				border-bottom: 4px solid #00b3cb
+			.order-3
+				border-bottom: 4px solid #ea475a
+			.order-4
+				border-bottom: 4px solid #fcaf17
+			.order-5
+				border-bottom: 4px solid #cfb9a5
+			.title
+				font-family: "almoni-dl-aaa-black"
+				line-height: 1.2
+				font-size: 18px
+				position: relative
+			.description
+				font-family: "almoni-dl-aaa-regular"
+				line-height: 1.2
+				font-size: 14px
+
+		//=============== slider ====================
+
+		.slick-slider-2
+			direction: ltr
+			position: relative
+			display: block
+			box-sizing: border-box
+			-webkit-touch-callout: none
+			-webkit-user-select: none
+			-khtml-user-select: none
+			-moz-user-select: none
+			-ms-user-select: none
+			user-select: none
+			-ms-touch-action: pan-y
+			touch-action: pan-y
+			-webkit-tap-highlight-color: transparent
+
+			.slick-list
+				position: relative
+				overflow: hidden
+				display: block
+				margin: 0
+				padding: 0
+				width: 100%
+				transform: translate3d(0, 0, 0)
+				&:focus
+					outline: none
+				&.dragging
+					cursor: pointer
+					cursor: hand
+
+			.slick-track
+				position: relative
+				left: 0
+				top: 0
+				display: block
+				transform: translate3d(0, 0, 0)
+
+				&:before,
+				&:after
+					content: ""
+					display: table
+
+				&:after
+					clear: both
+
+			.slick-slide
+				float: left
+				height: 100%
+				min-height: 250px
+
+			.slick-arrow
+				position: absolute
+				border: none
+				outline: none
+				top: 50%
+				width: 25px
+				height: 25px
+				border-left: 5px solid #00b3cb
+				border-top: 5px solid #00b3cb
+				z-index: 99999
+
+			.slick-next
+				right: 20px
+				transform: translateY(-50%) rotate(135deg)
+			.slick-prev
+				left: 20px
+				transform: translateY(-50%) rotate(-45deg)
+
+			.slick-arrow.slick-hidden
+				display: none
+
+			.slick-next:before, .slick-prev:before
+				content: none
+			.slick-dots
+				li
+					margin: 0
+					button
+						&:before
+							font-size: 12px
+			.slick-dots
+				bottom: -35px
+
+
+
+
+
+
+
+
+
+	.sixth-section
+		width: 100%
+		background: #f4f4f4
+		.main-holder
+			padding: 0
+		.items
+			display: flex
+			justify-content: center
+			align-items: center
+			margin: 30px -20px 30px
+			.item
+				list-style: none
+				padding: 0 20px
+				width: 25%
+				display: flex
+				flex-direction: column
+				align-items: center
+				text-align: center
+				direction: rtl
+			.wrap-list
+				display: flex
+				justify-content: flex-start
+				align-items: center
+				flex-direction: column
+				background: white
+				min-height: 340px
+				max-width: 295px
+			.image
+				width: 100%
+				height: 150px
+				background-size: cover
+				background-position: center
+				display: block
+				margin-bottom: 20px
+			.wrap-title
+				font-family: "almoni-dl-aaa-bold"
+				line-height: 1.2
+				font-size: 23px
+				color: #01013b
+				margin-bottom: 15px
+				min-height: 55px
+				display: flex
+				justify-content: center
+				align-items: center
+			.description
+				font-family: "almoni-dl-aaa-regular"
+				line-height: 1.2
+				font-size: 16px
+				color: #7f7f7f
+				padding: 0 15px
+			.button
+				font-family: "almoni-dl-aaa-bold"
+				line-height: 1.2
+				font-size: 15px
+				color: white
+				background: #00b3cc
+				margin-bottom: 20px
+				margin-top: 20px
+				width: 80%
+				padding: 5px 0
+				border-radius: 25px
+				min-height: 30px
+				text-decoration: none
+				transition: all 0.3s ease
+				&:hover
+					text-decoration: none
+					background: #0dcae4
+					box-shadow: 1.414px 1.414px 50px 0px rgba(13, 202, 228, 0.3)
+		.wrap-button
+			text-align: center
+			display: flex
+			justify-content: center
+			align-items: center
+			font-family: "almoni-dl-aaa-bold"
+			line-height: 1.2
+			font-size: 16px
+			.button
+				text-decoration: none
+				background: #fcaf17
+				display: flex
+				justify-content: center
+				align-items: center
+				min-height: 50px
+				min-width: 200px
+				color: white
+				border-radius: 25px
+				margin-bottom: 30px
+				position: relative
+				transition: all 0.3s ease
+				&:hover
+					text-decoration: none
+					background: #da9100
+					box-shadow: 1.414px 1.414px 50px 0 rgba(255, 197, 84, 0.3)
+				&:after
+					content: ''
+					position: absolute
+					border: none
+					outline: 0
+					top: 50%
+					left: 10%
+					width: 11px
+					height: 11px
+					border-left: 3px solid white
+					border-top: 3px solid white
+					//z-index: 99999
+					transform: translateY(-50%) rotate(-45deg)
+					z-index: 99999
+
+
+
+		//=============== slider ====================
+
+		.slick-slider-3
+			direction: ltr
+			position: relative
+			display: block
+			box-sizing: border-box
+			-webkit-touch-callout: none
+			-webkit-user-select: none
+			-khtml-user-select: none
+			-moz-user-select: none
+			-ms-user-select: none
+			user-select: none
+			-ms-touch-action: pan-y
+			touch-action: pan-y
+			-webkit-tap-highlight-color: transparent
+
+			.slick-list
+				position: relative
+				overflow: hidden
+				display: block
+				margin: 0
+				padding: 0
+				width: 100%
+				transform: translate3d(0, 0, 0)
+				&:focus
+					outline: none
+				&.dragging
+					cursor: pointer
+					cursor: hand
+
+			.slick-track
+				position: relative
+				left: 0
+				top: 0
+				display: block
+				transform: translate3d(0, 0, 0)
+
+				&:before,
+				&:after
+					content: ""
+					display: table
+
+				&:after
+					clear: both
+
+			.slick-slide
+				float: left
+				height: 100%
+				min-height: 250px
+
+			.slick-arrow
+				position: absolute
+				border: none
+				outline: none
+				top: 50%
+				width: 25px
+				height: 25px
+				border-left: 5px solid #00b3cb
+				border-top: 5px solid #00b3cb
+				z-index: 99999
+
+			.slick-next
+				right: 20px
+				transform: translateY(-50%) rotate(135deg)
+			.slick-prev
+				left: 20px
+				transform: translateY(-50%) rotate(-45deg)
+
+			.slick-arrow.slick-hidden
+				display: none
+
+			.slick-next:before, .slick-prev:before
+				content: none
+			.slick-dots
+				li
+					margin: 0
+					button
+						&:before
+							font-size: 12px
+			.slick-dots
+				bottom: -35px
+
+
+
+
+
+	.seventh-section
+		width: 100%
+		background: white
+		text-align: center
+		.background-holder
+			background-image: url(../img/background-holder.png)
+			background-size: cover
+			position: absolute
+			bottom: 0
+			left: 0
+			width: 100%
+			height: 11px
+		.main-holder
+			padding: 0
+		.wrap-insta
+			margin-top: 40px
+		.insta
+			text-decoration: none
+			color: #01013b
+			font-size: 40px
+			transition: all 0.3s ease
+			&:hover
+				text-decoration: none
+				color: #00b3cc
+		h3
+			direction: rtl
+			color: #01013b
+			font-family: "almoni-dl-aaa-bold"
+			line-height: 1.2
+			font-size: 27px
+			margin-bottom: 40px
+			padding-bottom: 20px
+			position: relative
+			&:after
+				content: ''
+				width: 70px
+				color: #05a0ab
+				position: absolute
+				border-bottom: 5px solid #05a0ab
+				bottom: 0
+				left: 50%
+				z-index: 2
+				transform: translateX(-50%)
+		.instagram-pics
+			display: flex
+			justify-content: center
+			align-items: center
+			flex-wrap: wrap
+			margin-bottom: 50px
+			li
+				width: 20%
+				height: 260px
+				list-style: none
+				img
+					width: 100%
+					height: 100%
+
+
+
 
 
 

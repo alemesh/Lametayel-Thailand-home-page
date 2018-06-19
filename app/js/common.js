@@ -1,9 +1,127 @@
 $(function() {
 
 	// Custom JS
+    initSlickCarousel();
+    initSlickCarousel2();
+    initSlickCarousel3();
 
 });
 
+
+
+
+// slick init
+function initSlickCarousel() {
+    jQuery('.slick-slider').slick({
+        slidesToScroll: 1,
+        slidesToShow: 3,
+        // infinite: true,
+        // adaptiveHeight: true,
+        rows: 0,
+        // prevArrow: '<span class="slick-prev"></span>',
+        // nextArrow: '<span class="slick-next"></span>',
+        responsive: [{
+            breakpoint: 992,
+            settings: {
+                slidesToScroll: 1,
+                dots: true,
+                arrows: false,
+                autoplay: true,
+                // speed: 2000,
+                slidesToShow: 1
+            }
+        }]
+    });
+}
+function initSlickCarousel2() {
+    jQuery('.slick-slider-2').slick({
+        slidesToScroll: 1,
+        slidesToShow: 5,
+        // infinite: true,
+        // adaptiveHeight: true,
+        rows: 0,
+        // prevArrow: '<span class="slick-prev"></span>',
+        // nextArrow: '<span class="slick-next"></span>',
+        responsive: [{
+            breakpoint: 1200,
+            settings: {
+                slidesToScroll: 1,
+                dots: true,
+                arrows: false,
+                centerMode: true,
+                autoplay: true,
+                // speed: 2000,
+                slidesToShow: 3
+            }
+        },
+            {
+                breakpoint: 992,
+                settings: {
+                    slidesToScroll: 1,
+                    dots: true,
+                    arrows: false,
+                    centerMode: true,
+                    autoplay: true,
+                    // speed: 2000,
+                    slidesToShow: 2
+                }
+            },
+                {
+                    breakpoint: 768,
+                    settings: {
+                        slidesToScroll: 1,
+                        dots: true,
+                        arrows: false,
+                        centerMode: true,
+                        autoplay: true,
+                        // speed: 2000,
+                        slidesToShow: 1
+                    }
+                }]
+    });
+}
+function initSlickCarousel3() {
+    jQuery('.slick-slider-3').slick({
+        slidesToScroll: 1,
+        slidesToShow: 4,
+        // infinite: true,
+        // adaptiveHeight: true,
+        rows: 0,
+        // prevArrow: '<span class="slick-prev"></span>',
+        // nextArrow: '<span class="slick-next"></span>',
+        responsive: [{
+            breakpoint: 1200,
+            settings: {
+                slidesToScroll: 1,
+                dots: true,
+                arrows: false,
+                autoplay: true,
+                // speed: 2000,
+                slidesToShow: 3
+            }
+        },{
+            breakpoint: 998,
+            settings: {
+                slidesToScroll: 1,
+                dots: true,
+                arrows: false,
+                autoplay: true,
+                // speed: 2000,
+                slidesToShow: 2
+            }
+        },{
+            breakpoint: 768,
+            settings: {
+                slidesToScroll: 1,
+                dots: true,
+                arrows: false,
+                autoplay: true,
+                // speed: 2000,
+                slidesToShow: 1
+            }
+        }]
+    });
+}
 
 //========== custom select =================
 $(".custom-select").each(function() {

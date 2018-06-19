@@ -2,6 +2,17 @@
 
 /*==========  Desktop First  ==========*/
 
+@media only screen and (max-width : 1400px)
+    .hlt-wraper
+      .second-section
+        .main-holder
+          padding: 0 30px
+
+      .fifth-section
+        .items
+          .title
+            font-size: 15px
+
 /* Large Devices, Wide Screens */
 @media only screen and (max-width : 1200px)
     .hlt-wraper
@@ -11,6 +22,25 @@
             display: none
           .left-block
             width: 100%
+
+      .second-section
+        .items
+          a
+            font-size: 30px
+      .fourth-section
+        .background-lier-fourth-section
+          display: none
+
+      .sixth-section
+        .main-holder
+          padding: 0 30px
+
+      .seventh-section
+        .main-holder
+          padding: 0 30px
+        .instagram-pics
+          li
+            height: 200px
 
 
 /* Medium Devices, Desktops */
@@ -29,6 +59,37 @@
             width: 100%
             margin: 13px 0  0
 
+      .second-section
+        .items
+          margin: 60px -22px 50px
+
+      .fourth-section
+        .items
+          margin: 0 -25px 70px
+          .item
+            padding: 0 25px
+            font-size: 16px
+          .wrap-img
+            width: 100px
+            height: 100px
+
+      .fifth-section
+        .slick-slider-2
+          .slick-dots
+            bottom: -50px
+
+      .sixth-section
+        .slick-slider-3
+          .slick-dots
+            bottom: -50px
+        .items
+          margin: 30px -20px 70px
+
+      .seventh-section
+        .instagram-pics
+          li
+            height: 150px
+
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px)
@@ -39,14 +100,53 @@
             font-size: 40px
             margin-bottom: 10px
 
+      .third-section
+        .items
+          a
+            height: 260px
+          .item
+            width: 50%
+          .mobile-hidden
+            display: none
+
+      .fourth-section
+        .main-holder
+          padding: 0 5px
+        .items
+          max-width: 500px
+          margin: 0 auto
+          .item
+            width: 50%
+
+      .seventh-section
+        .wrap-insta
+          margin-top: 20px
+
+      .seventh-section
+        .background-holder
+          background-image: url(../img/background-holder-mobile.png) !important
+        .instagram-pics
+          margin-bottom: 80px
+          li
+            width: 33.33333333%
+            height: 210px
+          .mobile-hidden
+            display: none
+
+
+
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px)
     .hlt-wraper
       .header
+        min-height: 560px
+        background-image: url(../img/background-header-mobile.png) !important
         .htl-contactform-section
+          margin-top: 160px
           h3
             font-size: 30px
+            margin-bottom: 15px
           .main-holder-form
             padding: 0 30px
           .form-control
@@ -68,6 +168,28 @@
             padding: 0
           .left-block
             justify-content: space-between
+
+      .seventh-section
+        .instagram-pics
+          li
+            //width: 33.33333333%
+            height: 115px
+
+      .second-section
+        .background-holder
+          background-image: url(../img/background-holder-mobile.png) !important
+
+      .third-section
+        .items
+          a
+            height: 200px
+          .item
+            width: 100%
+
+      .fifth-section
+        .main-holder
+          padding: 15px
+
 
 
 
