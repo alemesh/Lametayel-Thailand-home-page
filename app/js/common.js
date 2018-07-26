@@ -17,7 +17,7 @@ function initSlickCarousel() {
         slidesToShow: 3,
         // infinite: true,
         // adaptiveHeight: true,
-        rows: 0,
+        // rows: 0,
         // prevArrow: '<span class="slick-prev"></span>',
         // nextArrow: '<span class="slick-next"></span>',
         responsive: [{

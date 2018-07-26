@@ -308,16 +308,21 @@ input, textarea, select
 			top: 50%
 			left: 10px
 			margin-top: -3px
-			border-bottom: 1px solid white
-			border-right: 1px solid white
-			transform: rotate(45deg) translateY(-50%)
+			//border-bottom: 1px solid white
+			//border-right: 1px solid white
+			border: 7px solid transparent
+			border-top: 7px solid white
+			//transform: rotate(45deg) translateY(-50%)
 			transition: all .4s ease-in-out
 			transform-origin: 50% 0
 			z-index: 2
 
+
+
 		.custom-select.opened .custom-select-trigger:after
 			margin-top: 3px
-			transform: rotate(-135deg) translateY(-50%)
+			//transform: rotate(-135deg) translateY(-50%)
+			transform: rotate(-180deg)
 			z-index: 999999
 
 		.custom-options
@@ -425,6 +430,7 @@ input, textarea, select
 				align-items: center
 				flex-direction: column
 				background: #d7d7d7
+				background-size: cover
 				width: 100%
 				text-decoration: none
 				color: white
@@ -634,10 +640,10 @@ input, textarea, select
 			padding: 0
 		.background-lier-fourth-section
 			position: absolute
-			left: 0
+			right: 0
 			top: 50%
-			width: 167px
-			height: 326px
+			width: 172px
+			height: 130px
 			transform: translateY(-50%)
 		h3
 			direction: rtl
@@ -698,6 +704,14 @@ input, textarea, select
 	.fifth-section
 		width: 100%
 		background: white
+		position: relative
+		.background-lier-fifth-section
+			position: absolute
+			left: 0
+			top: 50%
+			width: 167px
+			height: 326px
+			transform: translateY(-50%)
 		.main-holder
 			max-width: 1360px
 			padding: 0 30px
@@ -752,8 +766,8 @@ input, textarea, select
 				transition: all 0.5s ease
 				&:hover
 					text-decoration: none
-					//background: #c98e1a
-					box-shadow: 1.414px 1.414px 50px 0px rgba(46, 46, 150, 0.8)
+					background: #05052f
+					//box-shadow: 1.414px 1.414px 50px 0px rgba(46, 46, 150, 0.8)
 			.wrap-img
 				//margin-bottom: 25px
 				margin-top: 25px
